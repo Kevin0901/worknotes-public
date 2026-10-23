@@ -1,0 +1,6 @@
+# 一律使用 LF 換行（Windows 也一樣），避免 Markdown 測試與 diff 出現 CRLF 差異
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.zip binary

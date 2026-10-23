@@ -1,0 +1,17 @@
+# 本機開發用 PostgreSQL：npm run db:up（需要 Docker Desktop）
+# 連線字串：postgres://worknotes:localdev@localhost:5432/worknotes
+services:
+  db:
+    image: postgres:16
+    container_name: worknotes-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: worknotes
+      POSTGRES_PASSWORD: localdev
+      POSTGRES_DB: worknotes
+    ports:
+      - "5432:5432"
+    volumes:
+      - worknotes-db:/var/lib/postgresql/data
+volumes:
+  worknotes-db:

@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# env files（請勿提交任何密碼或金鑰）
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# misc
+.DS_Store
+npm-debug.log*
+
+# 測試輸出
+/test-results/
+
+# Claude Code 本機預覽設定
+/.claude/launch.json

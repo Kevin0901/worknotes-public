@@ -1,0 +1,63 @@
+{
+  "name": "worknotes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "工作筆記：需 Google 登入並經管理員核准的 Notion 風格筆記系統",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "hash-password": "node scripts/hash-password.mjs",
+    "test": "node tests/run-unit.mjs",
+    "test:e2e:access": "node tests/e2e/access.mjs",
+    "test:e2e:ai": "node tests/e2e/ai.mjs",
+    "test:e2e:editor": "node tests/e2e/editor.mjs",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose stop db"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.131.0",
+    "@floating-ui/dom": "^1.8.0",
+    "@tiptap/extension-code-block-lowlight": "^3.32.0",
+    "@tiptap/extension-image": "^3.32.0",
+    "@tiptap/extension-list": "^3.32.0",
+    "@tiptap/extension-table": "^3.32.0",
+    "@tiptap/extensions": "^3.32.0",
+    "@tiptap/markdown": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "@tiptap/react": "^3.32.0",
+    "@tiptap/starter-kit": "^3.32.0",
+    "@tiptap/suggestion": "^3.32.0",
+    "fflate": "^0.8.3",
+    "jose": "^6.2.12",
+    "leaflet": "^1.9.4",
+    "lowlight": "^3.3.0",
+    "lucide-react": "^1.55.0",
+    "next": "^16.4.2",
+    "postgres": "^3.4.9",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.1",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/leaflet": "^1.9.22",
+    "@types/node": "^24.19.2",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "jiti": "^2.7.0",
+    "playwright": "^1.64.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
+  }
+}
